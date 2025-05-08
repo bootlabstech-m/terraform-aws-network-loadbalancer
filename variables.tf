@@ -62,6 +62,16 @@ variable "listener_protocol" {
   type = string
   description = "Protocol for connections from clients to the load balancer"
 }
+
+variable "ssl_policy" {
+  type = string
+  description = "ssl policy, only used in https protocol"
+}
+
+variable "certificate_arn" {
+  type = string
+  description = "certificate arn value for ssl, used only in https protocol"
+}
 variable "role_arn" {
   type = string  
   description = "Role ARN"

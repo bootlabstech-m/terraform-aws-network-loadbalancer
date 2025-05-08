@@ -35,6 +35,8 @@ resource "aws_lb_listener" "front_end" {
   load_balancer_arn = aws_lb.loadbalancer.arn
   port              = var.listener_port
   protocol          = var.listener_protocol
+  ssl_policy        = var.ssl_policy
+  certificate_arn   = var.certificate_arn
 
   default_action {
     type             = "forward"
